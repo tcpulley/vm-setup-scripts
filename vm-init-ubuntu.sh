@@ -5,13 +5,19 @@
 # Install Open VM Tools and OpenSSH Server
 sudo apt-get update
 sudo apt-get install -y open-vm-tools open-vm-tools-desktop openssh-server 
+
 # Use a 12 hour clock 
 gsettings set org.gnome.desktop.interface clock-format '12h'
+
 # Disable Window Animations
 gsettings set org.gnome.desktop.interface enable-animations false
+
 # Don't turn off the display or lock the system
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
+
+# Center New Windows
+gsettings set org.gnome.mutter center-new-windows true
 
 # Silence the bell
 bell_style_option="set bell-style none"
